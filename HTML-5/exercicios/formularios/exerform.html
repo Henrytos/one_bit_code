@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+</head>
+<body>
+  <h3>Cadastro da liga dos astraunautas</h3>
+  <form action="" method="get" autocomplete="on">
+  <br>
+      <label for="inome">Nome:</label>
+      <input type="text" name="nome" id="inome" minlength="4" maxlength="15" required>
+    <br>
+  <br>
+      <label for="iemal">Email:</label>
+      <input type="email" name="email" id="iemail" required>
+      <label for="isen">-PassWord:</label>
+      <input type="password" name="sanha" id="isen" minlength="8" required>
+    <br>
+  <br>
+      <label for="idia">Data de nascimento</label>
+      <input type="date" name="dia" id="idia" required>
+      <label for="ift">-Foto:</label>
+      <input type="file" name="foto" id="ift" required>
+    <br>
+  <br>
+      <label for="inac">Nacionalidade:</label>
+      <select name="nac" id="inac">
+        <option value="RS">Russo</option>
+        <option value="EUA">Americano</option>
+        <option value="BR">Brasileiro</option>
+      </select>
+      <label for="sexo">-Genero</label>
+      <label for="isexmas">F</label>
+      <input type="radio" id="isexmas" name="sexo" value="F">
+      <label for="isexfem">M</label>
+      <input type="radio" id="isexfem" name="sexo" value="M">
+    
+    <br>
+  <br>
+      <label for="">Suas pricipais QualidadeS:</label>
+    
+  <br>
+      <label for="iqi">Inteligencia</label>
+      <input type="checkbox" name="qi" id="iqi">
+    <label for="ire">| Resistencia</label>
+    <input type="checkbox" name="res" id="ire">
+    <label for="ipf">| Preparo Físico</label>
+    <input type="checkbox" name="pf" id="ipf">
+    <label for="iedu">| Educação</label>
+    <input type="checkbox" name="edu" id="iedu"><br><br>
+    <textarea name="texto" id="" cols="30" rows="10" placeholder="Por que voce gostaria de ser um asustronauta?"></textarea>
+    <Br>
+    <input type="submit" value="Criar">
+  </form>
+</body>
+</html>

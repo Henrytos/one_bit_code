@@ -1,0 +1,42 @@
+/*Seletror global*/
+*{
+  margin: 0;
+  padding: 0;
+}
+/*Propia tag*/
+h1{
+  color: red;
+}
+/*Class*/
+.conteudo{
+  color: blue;
+}
+/*id*/
+#texto{
+  color: yellow;
+}
+/*adjacente*/
+h1+h2{
+  color: purple;
+}
+/*seletor de descendencia*/
+div ol li {
+  color: rgb(70, 173, 26);
+}
+/*Seletor filho*/
+div > ol > li > a {
+  color: cadetblue;
+}
+/*seletor de atributo*/
+a[href="/link"]{
+color: black;
+
+}
+/*nth-of-type() pseudo classes*/
+ol li:nth-child(odd){
+  color: blueviolet;
+}
+/*Seletores gerais de irmãos*/
+p ~ span {
+  color: red;
+}
