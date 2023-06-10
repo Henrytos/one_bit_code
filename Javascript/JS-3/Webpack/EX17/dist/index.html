@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>IMC</title>
+  </head>
+  <body>
+    <header>
+      <h2>Calculador de imc</h2>
+      <h3>IMC = Peso ÷ (Altura × Altura)</h3>
+    </header>
+    <hr />
+    <main>
+      <form method="get" class="form_imc">
+        <label for="peso">Informe seu peso (kg):</label>
+        <input
+          type="number"
+          name="peso"
+          id="peso"
+          required
+          placeholder="60kg"
+        />
+        <label for="altura">Informe sua altura (metro e cm)</label>
+        <input
+          type="number"
+          required
+          name="altura"
+          id="altura"
+          placeholder="1,72cm"
+        />
+        <input type="submit" value="Calcular" id="btn" />
+      </form>
+    </main>
+    <script src="index.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+body{
+    width:/* largura*/ ;
+    max-width:/* largura-maxima*/ ;
+    height:/* altura*/ ;
+    max-height:/* altura maxima*/ ;
+}
+
+@media screen and (max-width:1000px) {
+    /*estilos até tamano 1000 de px*/
+}

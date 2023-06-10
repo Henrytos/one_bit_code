@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="User.js" defer type="module"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Ticket</title>
+  </head>
+  <body>
+    <main>
+      <form action="post" class="formStudent">
+        <img src="styles/logo Etec.png" alt="" />
+        <h3><label for="">Login:</label></h3>
+        <label for="fullNameStudent">Nome Completo:</label>
+        <input
+          type="text"
+          name="fullNameStudent"
+          id="fullNameStudent"
+          required
+        /><br />
+        <label for="RmStudent">Digite RM:</label>
+        <input
+          type="number"
+          name="RmStudent"
+          maxlength="5"
+          min="12000"
+          max="12999"
+          id="RmStudent"
+          required
+        /><br />
+        <input type="submit" id="btn" value="enviar" />
+      </form>
+    </main>
+  </body>
+</html>
