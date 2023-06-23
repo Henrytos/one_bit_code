@@ -24,18 +24,3 @@ getAge('2001-09-02')
     .then(isOver18 => isOver18 ? console.log('maior de idade') : console.log('menor de idade'))
     .catch(err => console.log(err.message))
 
-
-getAge('2009-09-02')
-    .then(age => {
-        return checkAge(age)
-    })
-    .then(isOver18 => {
-        if (isOver18) {
-            console.log('Maior de idade')
-        } else {
-            console.log('Menor de idade')
-        }
-    })
-    .catch(err => {
-        console.log(err.message)
-    })
