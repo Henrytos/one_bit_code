@@ -1,0 +1,14 @@
+{
+  "finance": [
+    {
+      "transaction": "Programa :)",
+      "value": "10",
+      "id": 1
+    },
+    {
+      "transaction": "ana",
+      "value": "-9",
+      "id": 2
+    }
+  ]
+}
