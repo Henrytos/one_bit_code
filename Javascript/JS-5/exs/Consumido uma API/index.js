@@ -123,21 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function formatarNumero(numero) {
-
     let numeroString = numero.toString();
-
-
     let partes = [];
     while (numeroString.length > 3) {
         partes.unshift(numeroString.slice(-3));
         numeroString = numeroString.slice(0, -3);
     }
-
-
     if (numeroString.length > 0) {
         partes.unshift(numeroString);
     }
-
-
     return partes.join('.');
 }
