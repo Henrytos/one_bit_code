@@ -8,7 +8,8 @@ import {
 
 export const Planets = [];
 
-type Coordinate = [number, number, number, number];
+export type Coordinate = [number, number, number, number];
+
 type Situation = "habitado" | "habitável" | "inabitável" | "inexplorado";
 
 export type Planet = {
@@ -31,49 +32,19 @@ while (userOption !== 6) {
   `;
 
   userOption = Number(prompt(menu));
-  let namePlanet: string;
-  let nameSatellite: string;
-  let situation: string;
+
   switch (userOption) {
     case 1:
-      let name: string = prompt("nome do planeta");
-      let coordinate: Coordinate = [
-        Number(prompt(`cordena x do ${name}`)),
-        Number(prompt(`cordena y do ${name}`)),
-        Number(prompt(`cordena z do ${name}`)),
-        Number(prompt(`cordena w do ${name}`)),
-      ];
-      situation = prompt(`qual situação do planeta ${name}`);
-
-      let planet: Planet = {
-        name,
-        coordinate,
-        situation,
-        satellites: [],
-      };
-      firstMenuOption(planet);
+      firstMenuOption();
       break;
     case 2:
-      namePlanet = prompt(`qual nome do planeta`);
-      situation = prompt(`qual a dituação do planeta ${namePlanet}`);
-
-      secondMenuOption(name, situation);
+      secondMenuOption();
       break;
     case 3:
-      namePlanet = prompt(`Qual nome do planeta`);
-      nameSatellite = prompt(
-        `Qual é o nome do satelite do planeta ${namePlanet} a ser adicionado`
-      );
-
-      thirdMenuOption(namePlanet, nameSatellite);
+      thirdMenuOption();
       break;
     case 4:
-      namePlanet = prompt(`Qual nome do planeta`);
-      nameSatellite = prompt(
-        `Qual é o nome do satelite do planeta ${namePlanet} a ser removido`
-      );
-
-      fourthMenuOption(namePlanet, nameSatellite);
+      fourthMenuOption();
       break;
     case 5:
       fiveMenuOption();
