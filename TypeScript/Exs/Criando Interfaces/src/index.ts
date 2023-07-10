@@ -33,7 +33,6 @@ async function getUser(name: string) {
     alert(`Usuario:${name} não encontrado`);
   }
 }
-
 function findUser(name: string): User {
   return Users.find((user) => user.login === name) ?? false;
 }
@@ -85,7 +84,9 @@ function calculetRepos(): void {
   alert(`O total de repositorios é : ${totalRepos}`);
 }
 function topFiveUsers(): void {
-  const orderUsers = Users.sort((a, b) => b.public_repos - a.public_repos);
+  const orderUsers = [...Users].sort(
+    (a: User, b: User) => b.public_repos - a.public_repos
+  );
   const topFive = orderUsers.slice(0, 5);
   const topFiveUsers = topFive.reduce(
     (acum: string, target: User, i: number) =>
