@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resumo a Marte-OneBitX</title>
+    <!--icone-->
+    <link
+      rel="shortcut icon"
+      href="./imgs/FAVICON-SPACEX.png"
+      type="image/x-icon"
+    />
+    <!--Link css do sass-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--Link do bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <div
+      class="container-fluid main d-flex flex-column align-items-center justify-content-center"
+    >
+      <!--Formulario-->
+      <form action="" class="container px-4">
+        <!--imagem-->
+        <div class="container-fluid main-img mb-4">
+          <img src="./imgs/logoOneBitDark.png" alt="OBC" class="img-fluid" />
+        </div>
+        <!--Primeiro elemento-->
+        <p class="paragraph pt-3">1 - Qual o seu nome?</p>
+        <div class="input-group mb-3 w-100">
+          <span class="input-group-text" id="basic-addon1">Primeiro nome:</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Digite aqui"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <div class="input-group mb-3 w-100">
+          <span class="input-group-text" id="basic-addon1">Segundo nome:</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Digite aqui"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <!--Segundo elemento-->
+        <p class="paragraph pt-3">2 - Qual o seu gênero?</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Homen
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Mulher
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Prefiro não informar
+          </label>
+        </div>
+        <!--Terceiro elemento-->
+        <p class="paragraph pt-3">3 - Marque os treinamentos que você fez:</p>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault-1"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault-1"
+            >Treinamento básico de astronauta</label
+          >
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckChecked-2"
+            checked
+          />
+          <label class="form-check-label" for="flexSwitchCheckChecked-2"
+            >Treinamento físico básico</label
+          >
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckChecked-3"
+            checked
+          />
+          <label class="form-check-label" for="flexSwitchCheckChecked-3"
+            >Treinamento básico de astronauta</label
+          >
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckChecked-4"
+            checked
+          />
+          <label class="form-check-label" for="flexSwitchCheckChecked-4">
+            Treinamento físico intenso
+          </label>
+        </div>
+        <!--Quarto elemento-->
+        <p class="paragraph pt-3">
+          4 - Quais você acha que são suas qualidades?
+        </p>
+
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="inlineCheckbox1"
+            value="option1"
+          />
+          <label class="form-check-label" for="inlineCheckbox1">Proativo</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="inlineCheckbox2"
+            value="option2"
+          />
+          <label class="form-check-label" for="inlineCheckbox2">Proativo</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="inlineCheckbox3"
+            value="option2"
+          />
+          <label class="form-check-label" for="inlineCheckbox3"
+            >Não vomito fácil</label
+          >
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="inlineCheckbox4"
+            value="option2"
+          />
+          <label class="form-check-label" for="inlineCheckbox4"
+            >Não temo marciano</label
+          >
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="inlineCheckbox5"
+            value="option2"
+          />
+          <label class="form-check-label" for="inlineCheckbox5"
+            >Já vi todos os star wars</label
+          >
+        </div>file:///home/henry/Programas/one_bit_code/BootsTrap/icons
+
+        <!--Quinto elemento-->
+        <div class="container d-flex justify-content-center my-3">
+          <button type="button" class="btn btn-outline-danger">Enviar</button>
+        </div>
+      </form>
+      <!--Sexto elemento-->
+      <div class="container text-center footer">
+        <p>
+          Feito por Henry Franz &copy; OneBitCode todos os direitos reservados -
+          2021
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

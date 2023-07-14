@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-image: url("../../imgs/backgroundLp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+}
+.main form {
+  width: 450px;
+  background-color: rgba(19, 18, 18, 0.9450980392);
+}
+.main form .paragraph {
+  color: white;
+}
+.main form .main-img {
+  max-width: 200px;
+}
+.main form label {
+  color: white;
+}
+
+nav {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .main > form {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

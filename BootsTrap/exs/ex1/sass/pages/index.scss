@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  background-image: url("../../imgs/backgroundLp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  form {
+    width: 450px;
+    background-color: $background-color;
+    .paragraph {
+      color: white;
+    }
+    .main-img {
+      max-width: 200px;
+    }
+    label {
+      color: white;
+    }
+  }
+}
+nav {
+  color: white;
+}
+@media (max-width: 600px) {
+  .main > form {
+    width: 100%;
+  }
+}
