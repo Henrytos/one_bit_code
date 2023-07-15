@@ -1,0 +1,170 @@
+.container-12 {
+  background-image: url("../../imgs/humanFlight/01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.container-12-1 {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-12 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 120px;
+  line-height: 145px;
+}
+.text-container-12 {
+  font-size: 29px;
+}
+.container-14 {
+  background-image: url("../../imgs/humanFlight/02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.container-13 {
+  background-color: black;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+.email-2 {
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    color: #0a58ca;
+  }
+}
+.container-15 {
+  height: 100vh;
+  background-image: url("../../imgs/humanFlight/03.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.container-rigth {
+  padding-top: 15%;
+  margin-left: 55%;
+}
+.container-left {
+  padding-top: 15%;
+  padding-left: 5%;
+  margin-right: 55%;
+}
+.button-3 {
+  padding: 15px 48px;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+}
+.container-16 {
+  background-image: url("../../imgs/humanFlight/04.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.container-17 {
+  height: 100vh;
+  background-image: url("../../imgs/humanFlight/05.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 1600px) {
+  .title-12 {
+    font-size: 110px;
+    line-height: 110px;
+  }
+  .sub-title {
+    font-size: 25px;
+  }
+  .button-3,
+  .button-2 {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  .container-13 {
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .title-12 {
+    font-size: 90px;
+    line-height: 90px;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .button-3,
+  .button-2 {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  .container-13 {
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  .text-container-12 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .title-12 {
+    font-size: 60px;
+    line-height: 100px;
+  }
+  .sub-title {
+    font-size: 30px;
+  }
+  .button-3,
+  .button-2 {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  .container-13 {
+    p {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .title-12 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .sub-title {
+    font-size: 22px;
+  }
+  .button-3,
+  .button-2 {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .container-13 {
+    p {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}

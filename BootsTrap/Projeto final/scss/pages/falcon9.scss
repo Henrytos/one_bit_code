@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container-5 {
+  height: 100vh;
+  background-image: url("../../imgs/falcon9/01.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container-5-1 {
+  height: 81vh;
+}
+.title-5 {
+  font-size: 90px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+.container-6 {
+  width: 100%;
+  height: 40vh;
+  background-color: black;
+}
+.container-6-numbers {
+  font-weight: 500;
+  font-size: 90px;
+}
+.text-number {
+  font-weight: 400;
+}
+.container-7 {
+  height: 100vh;
+  background-image: url("../../imgs/falcon9/02.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container-7-1 {
+  height: 90vh;
+  p {
+    width: 640px;
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
+
+.container-8 {
+  height: 100vh;
+}
+.carrousel-item-1 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../imgs/falcon9/03.jpg");
+  height: 100vh;
+}
+.carrousel-item-2 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../imgs/falcon9/04.jpg");
+  height: 100vh;
+}
+
+.carrousel-item-3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../imgs/falcon9/05.jpg");
+  height: 100vh;
+}
+
+.carrousel-item-4 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../imgs/falcon9/06.jpg");
+  height: 100vh;
+}
+
+.carrousel-item-5 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../imgs/falcon9/07.jpg");
+  height: 100vh;
+}
+.container-9 {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../imgs/falcon9/08.jpg");
+}
+.container-10 {
+  height: 100vh;
+}
+.imgs-carrosel {
+  width: 100%;
+  height: 100vh;
+}
+.text-carrosel-2 {
+  background-color: black;
+}
+
+.container-11 {
+  background-color: black;
+  height: 85vh;
+  padding-top: 240px;
+}
+
+.button-2 {
+  padding: 16px;
+  border: 2px solid white;
+}
+.email {
+  color: $copyrightFooter;
+}
+#widthTable {
+  width: 480px;
+  color: $colorTable;
+}
+.tables-slide,
+.container-9-1 {
+  width: 500px;
+  margin-left: 13%;
+  padding-top: 15%;
+}
+.carrosel-4 {
+  margin-left: 13%;
+  padding-top: 15%;
+  width: 476px;
+}
+@media (max-width: 1200px) {
+  .container-10,
+  .active > img {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .title-5 {
+    font-size: 70px;
+  }
+  .container-6-numbers {
+    font-size: 50px;
+  }
+  .text-number {
+    font-size: 16px;
+  }
+  .container-7-1 {
+    p {
+      font-size: 18px;
+      line-height: 40px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .title-5 {
+    font-size: 50px;
+  }
+  .container-6-numbers {
+    font-size: 40px;
+  }
+  .text-number {
+    font-size: 14px;
+  }
+  .tables-slide {
+    width: 400px;
+  }
+  #widthTable {
+    width: 400px;
+  }
+  .container-9-1 {
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .container-7-1 {
+    p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  .title-5 {
+    font-size: 40px;
+  }
+  .container-7-1 > p {
+    font-size: 14px;
+  }
+  .tables-slide,
+  .container-9-1 {
+    width: 400px;
+    font-size: 12px;
+    margin-left: 5%;
+    padding-top: 15%;
+  }
+  #widthTable {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .container-5-1 {
+    h5 {
+      font-size: 16px;
+    }
+  }
+  .tables-slide,
+  .container-9-1 {
+    width: 350px;
+    font-size: 12px;
+    margin-left: 5%;
+    padding-top: 15%;
+  }
+  #widthTable {
+    width: 80vw;
+  }
+}
+@media (max-width: 400px) {
+  .tables-slide,
+  .container-9-1 {
+    width: 90%;
+    font-size: 12px;
+    margin-left: 0%;
+    padding-top: 15%;
+  }
+}
+@media (max-width: 350px) {
+  .tables-slide,
+  .container-9-1 {
+    width: 80%;
+    font-size: 12px;
+    margin-left: 0%;
+    padding-top: 15%;
+  }
+}
