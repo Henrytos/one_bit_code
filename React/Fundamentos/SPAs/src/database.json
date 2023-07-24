@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Intel Core i9-11900K 3.5GHz 8-Core Processor",
+    "description": "The Intel Core i9-11900K is a high-performance processor with 8 cores and 16 threads. It features a base clock speed of 3.5GHz and can reach up to 5.3GHz with Intel Turbo Boost Max Technology 3.0.",
+    "price": 499.99
+  },
+  {
+    "id": 2,
+    "name": "AMD Ryzen 9 5950X 3.4GHz 16-Core Processor",
+    "description": "The AMD Ryzen 9 5950X is a top-of-the-line processor for high-end computing. It offers 16 cores and 32 threads, with a base clock speed of 3.4GHz and a maximum boost clock of 4.9GHz.",
+    "price": 749.99
+  },
+  {
+    "id": 3,
+    "name": "Corsair Vengeance LPX 32GB (2 x 16GB) DDR4-3200 Memory",
+    "description": "Corsair Vengeance LPX is a high-performance memory kit designed for gaming and content creation. This kit includes two 16GB DDR4 modules running at 3200MHz, providing fast and reliable performance.",
+    "price": 159.99
+  },
+  {
+    "id": 4,
+    "name": "Crucial Ballistix 64GB (4 x 16GB) DDR4-3600 Memory",
+    "description": "Crucial Ballistix is a premium memory kit optimized for gaming and demanding applications. This kit includes four 16GB DDR4 modules running at 3600MHz, delivering excellent performance and stability.",
+    "price": 299.99
+  },
+  {
+    "id": 5,
+    "name": "NVIDIA GeForce RTX 3080 10GB GDDR6X Graphics Card",
+    "description": "The NVIDIA GeForce RTX 3080 is a high-end graphics card designed for gaming and professional workloads. It features 10GB of GDDR6X memory, ray-tracing capabilities, and DLSS technology for enhanced performance.",
+    "price": 999.99
+  }
+]
