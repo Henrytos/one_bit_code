@@ -1,0 +1,18 @@
+.btn {
+  all: unset;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: white;
+  width: 120px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: #232323;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #232323;
+  color: white;
+  border: 1px solid white;
+}

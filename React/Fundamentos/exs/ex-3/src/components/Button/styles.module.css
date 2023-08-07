@@ -1,0 +1,18 @@
+a {
+  all: unset;
+  display: block;
+  width: 80px;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  background-color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+a:hover {
+  background-color: white;
+  color: black;
+}

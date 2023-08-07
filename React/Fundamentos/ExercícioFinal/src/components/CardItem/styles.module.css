@@ -1,0 +1,17 @@
+.card {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #1f2121;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.cardTitle {
+  font-size: 1rem;
+}
+.cardNumber {
+  text-align: center;
+  font-size: 2.5rem;
+}
