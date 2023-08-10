@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #363333;
+}
+main {
+  max-width: 360px;
+  margin: 0 auto;
+}
+img {
+  display: block;
+  margin: 2rem auto;
+  padding: 6px;
+  border: 1px solid #f6e9e9;
+  border-radius: 100%;
+  object-fit: cover;
+}
+h1 {
+  display: block;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #f6e9e9;
+}
+svg {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+h2 {
+  display: block;
+  margin: 0 auto 2rem;
+  font-weight: 300;
+  font-size: 1.25rem;
+  font-family: "Nunito Sans", sans-serif;
+  color: #a19090;
+  text-align: center;
+}
+a {
+  all: unset;
+  display: block;
+  max-width: 280px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #e16428;
+  text-align: center;
+  border: 2px solid #e16428;
+  border-radius: 100px;
+  padding: 1rem 0;
+  margin: 0 auto 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+a:hover {
+  background-color: #e16428;
+  color: #f6e9e9;
+}
