@@ -10,7 +10,7 @@ const SearchForm = () => (
        flex-grow 
        p-2 rounded-l-lg border-2 border-transparent
        bg-zinc-300 dark:bg-zinc-600 text-zinc-600 dark:text-zinc-50
-       focus:outline-none focus:border-emerald-600 dark:focus:border-emerald-400 transition-colors"
+       focus:outline-none focus:border-zinc-600 dark:focus:border-zinc-400 transition-colors"
       type="text"
       placeholder="Pesquisar..."
     />
@@ -20,9 +20,9 @@ const SearchForm = () => (
        bg-zinc-300 dark:bg-zinc-600
        text-zinc-600 dark:text-zinc-50
        focus:outline-none 
-       dark:focus:border-emerald-400 focus:border-emerald-600  
-       dark:focus:text-emerald-400 focus:text-emerald-600
-       dark:hover:border-emerald-400 hover:border-emerald-600 
+       dark:focus:border-zinc-400 focus:border-zinc-600  
+       dark:focus:text-zinc-400 focus:text-zinc-600
+       dark:hover:border-zinc-400 hover:border-zinc-600 
        transition-colors
         "
     >

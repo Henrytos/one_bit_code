@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "from": "Bob@example.com",
+    "subject": "Hello World",
+    "body": "This is a test email message. Please ignore.",
+    "createdAt": "2020-06-15T09:45:00.000Z"
+  },
+  {
+    "id": 2,
+    "from": "Steve@example.com",
+    "subject": "Greetings and Salutations",
+    "body": "My sincerest wishes for a wonderful day.",
+    "createdAt": "2020-06-15T10:15:00.000Z"
+  },
+  {
+    "id": 3,
+    "from": "Frank@example.com",
+    "subject": "Hey There",
+    "body": "How's it going? It's been a while since we talked!",
+    "createdAt": "2020-06-15T10:45:00.000Z"
+  },
+  {
+    "id": 4,
+    "from": "Nicole@example.com",
+    "subject": "Meeting Invite",
+    "body": "Would you like to join us for a meeting tomorrow at 3 pm?",
+    "createdAt": "2020-06-15T11:15:00.000Z"
+  },
+  {
+    "id": 5,
+    "from": "Jack@example.com",
+    "subject": "New Project",
+    "body": "We need to discuss the new project we are working on.",
+    "createdAt": "2020-06-15T11:45:00.000Z"
+  },
+  {
+    "id": 6,
+    "from": "Rachel@example.com",
+    "subject": "Proposal Review",
+    "body": "Can you please review this proposal and let me know your thoughts?",
+    "createdAt": "2020-06-15T12:15:00.000Z"
+  },
+  {
+    "id": 7,
+    "from": "Wendy@example.com",
+    "subject": "Lunch Time",
+    "body": "Let's meet for lunch at the usual spot today.",
+    "createdAt": "2020-06-15T12:45:00.000Z"
+  },
+  {
+    "id": 8,
+    "from": "john@example.com",
+    "subject": "Thoughts on the Meeting",
+    "body": "I really enjoyed our discussion this morning. I was glad to have the opportunity to learn more about the project.",
+    "createdAt": "2020-09-14T10:00:00.000Z"
+  },
+  {
+    "id": 9,
+    "from": "jane@example.com",
+    "subject": "Follow Up",
+    "body": "I wanted to thank you again for the opportunity to discuss the project. I am still very interested and hope to hear back soon.",
+    "createdAt": "2020-09-15T10:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "from": "josh@example.com",
+    "subject": "Availability",
+    "body": "I am available to meet next week to go over details of the project. Please let me know what day and time works best for you.",
+    "createdAt": "2020-09-16T10:00:00.000Z"
+  },
+  {
+    "id": 11,
+    "from": "tom@example.com",
+    "subject": "Scheduling",
+    "body": "I have looked over the calendar and have seen that Tuesday at 3pm works for both of us. Is this still available?",
+    "createdAt": "2020-09-17T10:00:00.000Z"
+  },
+  {
+    "id": 12,
+    "from": "bill@example.com",
+    "subject": "Questions",
+    "body": "I have some questions about the next steps of the project. Are you available to chat sometime this week?",
+    "createdAt": "2020-09-18T10:00:00.000Z"
+  },
+  {
+    "id": 13,
+    "from": "jeremy@example.com",
+    "subject": "Updates",
+    "body": "I have some updates about the progress of the project. Can we meet to discuss this on Friday?",
+    "createdAt": "2020-09-19T10:00:00.000Z"
+  },
+  {
+    "id": 14,
+    "from": "johndoe@mail.com",
+    "subject": "Happy Birthday!",
+    "body": "Happy Birthday John! I hope you have a great day!",
+    "createdAt": "2020-02-20T13:47:53.000Z"
+  },
+  {
+    "id": 15,
+    "from": "janedoe@mail.com",
+    "subject": "Meeting tomorrow",
+    "body": "Don't forget that we have a meeting tomorrow at 9 AM. See you there!",
+    "createdAt": "2020-02-19T13:47:53.000Z"
+  },
+  {
+    "id": 16,
+    "from": "jimdoe@mail.com",
+    "subject": "Lunch?",
+    "body": "Do you want to grab lunch together tomorrow?",
+    "createdAt": "2020-02-18T13:47:53.000Z"
+  },
+  {
+    "id": 17,
+    "from": "susandoe@mail.com",
+    "subject": "Application Confirmation",
+    "body": "Your application to ABC University has been confirmed. Congratulations!",
+    "createdAt": "2020-02-17T13:47:53.000Z"
+  },
+  {
+    "id": 18,
+    "from": "lucasdoe@mail.com",
+    "subject": "Final Exams",
+    "body": "Don't forget that your final exams start next Monday!",
+    "createdAt": "2020-02-16T13:47:53.000Z"
+  },
+  {
+    "id": 19,
+    "from": "bobdoe@mail.com",
+    "subject": "Monthly Report",
+    "body": "Please submit your monthly report to the team by the end of the day.",
+    "createdAt": "2020-02-15T13:47:53.000Z"
+  },
+  {
+    "id": 20,
+    "from": "victoriadoe@mail.com",
+    "subject": "Payment Confirmation",
+    "body": "Your payment for the order ABC-123456 has been successfully processed.",
+    "createdAt": "2020-02-14T13:47:53.000Z"
+  }
+]
