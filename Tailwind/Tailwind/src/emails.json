@@ -4,7 +4,8 @@
     "from": "Bob@example.com",
     "subject": "Hello World",
     "body": "This is a test email message. Please ignore.",
-    "createdAt": "2020-06-15T09:45:00.000Z"
+    "createdAt": "2020-06-15T09:45:00.000Z",
+    "iframe": "https://www.youtube.com/embed/d20mAtPwrzI?si=mkXxCcjmQyyL99Zg"
   },
   {
     "id": 2,
