@@ -1,5 +1,8 @@
 import { Moon, Sun } from "lucide-react";
 import { useState } from "react";
+import Container from "./components/Container";
+import Title from "./components/Title";
+import Text from "./components/Text";
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -25,21 +28,22 @@ function App() {
           <Moon className="z-10 text-slate-600  dark:text-slate-500" />
           <Sun className=" z-10 text-yellow-500 dark:text-yellow-400" />
         </span>
-        <section className="text-zinc-900 dark:text-zinc-50 flex flex-col gap-4 px-40 max-2xl:px-10 max-sm:px-5 max-[300px]:px-3">
-          <h2>Lorem, ipsum dolor.</h2>
-          <span className="bg-zinc-900 dark:bg-zinc-50 w-full h-[1px]" /> Lorem
-          ipsum, dolor sit amet consectetur adipisicing elit. Eligendi porro
-          assumenda perferendis debitis, veniam ad deserunt ipsam quam, numquam
-          ducimus corporis vitae hic similique magnam error, earum modi
-          excepturi nobis laborum maiores commodi! Maiores reprehenderit placeat
-          quas soluta earum voluptates, optio veniam odio totam quo reiciendis
-          illo vero beatae. Corrupti dolores voluptatum voluptas. Earum
-          obcaecati quasi voluptates itaque quo voluptatem quis ipsum maiores?
-          Quasi veniam cupiditate vitae facere fuga amet corrupti est,
-          consequuntur maxime, incidunt odit facilis vero ad non laboriosam
-          quisquam ipsum molestias debitis, beatae quo. Consectetur explicabo
-          dignissimos eum repellat vel
-        </section>
+        <Container>
+          <Title>Lorem, ipsum dolor.</Title>
+          <Text>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+            porro assumenda perferendis debitis, veniam ad deserunt ipsam quam,
+            numquam ducimus corporis vitae hic similique magnam error, earum
+            modi excepturi nobis laborum maiores commodi! Maiores reprehenderit
+            placeat quas soluta earum voluptates, optio veniam odio totam quo
+            reiciendis illo vero beatae. Corrupti dolores voluptatum voluptas.
+            Earum obcaecati quasi voluptates itaque quo voluptatem quis ipsum
+            maiores? Quasi veniam cupiditate vitae facere fuga amet corrupti
+            est, consequuntur maxime, incidunt odit facilis vero ad non
+            laboriosam quisquam ipsum molestias debitis, beatae quo. Consectetur
+            explicabo dignissimos eum repellat vel
+          </Text>
+        </Container>
       </div>
     </>
   );
