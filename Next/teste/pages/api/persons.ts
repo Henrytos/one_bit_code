@@ -10,7 +10,7 @@ type UserType = {
   setMenssage: (menssage: string) => void;
   setAge: (age: number) => void;
 };
-const users: UserType = new User("nathalia", "eu te amo", 17);
+const users: UserType = new User("fulana", "eu te amo", 17);
 
 export default function handler(
   req: NextApiRequest,
