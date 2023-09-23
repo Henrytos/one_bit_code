@@ -10,11 +10,11 @@ type UserType = {
   setMenssage: (menssage: string) => void;
   setAge: (age: number) => void;
 };
-const user: UserType = new User("nathalia", "eu te amo", 17);
+const users: UserType = new User("nathalia", "eu te amo", 17);
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<UserType>
 ) {
-  res.status(200).json(user);
+  res.status(200).json(users);
 }
