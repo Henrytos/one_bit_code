@@ -2,52 +2,51 @@ import { GetServerSideProps, NextPage } from "next";
 import { ReactNode, useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-interface ApiResponse {
+type userDataType = {
   name: string;
   menssage: string;
   age: number;
-}
+};
+
 export const getServerSideProps: GetServerSideProps = async () => {
-  const userData: ApiResponse = await fetch(
+  const severSideData: userDataType = await fetch(
     `${process.env.NEXT_PUBLIC_APIURL}/api/persons`
   ).then((res) => res.json());
-
   return {
-    props: {
-      userData,
-    },
+    props: { severSideData },
   };
 };
 
 const nathalia: NextPage = (props: {
   children?: ReactNode;
-  userData?: ApiResponse;
+  severSideData?: userDataType;
 }) => {
-  const [userData, setUserData] = useState<ApiResponse>();
+  const [dataUser, setDataUser] = useState<userDataType | null>(null);
+
   useEffect(() => {
-    fetchDataUser();
+    dataFetch();
   }, []);
-  const fetchDataUser = async () => {
-    const userData: ApiResponse = await fetch("/api/persons").then((res) =>
+  const dataFetch = async () => {
+    const dataUser: userDataType = await fetch("/api/persons").then((res) =>
       res.json()
     );
-    setUserData(userData);
+    setDataUser(dataUser);
   };
-
   return (
     <>
       <Container>
         <Row>
           <Col>
-            <h2>Gerado lado servidor:</h2>
-            <p>eu amo a {props.userData?.name}</p>
-            <p>tem {props.userData?.age}</p>
+            <h1>Gerado lado servidor:</h1>
+            <p>nome:{props.severSideData?.name}</p>
+            <p>idade:{props.severSideData?.age}</p>
+            <p>Menssagen:{props.severSideData?.menssage}</p>
           </Col>
           <Col>
-            <h2>gerado lado cliente:</h2>
-            <p>eu amo a {userData?.name}</p>
-            <p>tem {userData?.age}</p>
+            <h1>Gerado lado Cliente:</h1>
+            <p>nome:{dataUser?.name}</p>
+            <p>idade:{dataUser?.age}</p>
+            <p>Menssagen:{dataUser?.menssage}</p>
           </Col>
         </Row>
       </Container>
