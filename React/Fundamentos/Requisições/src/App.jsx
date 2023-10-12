@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 async function fetchPokemon() {
   const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
