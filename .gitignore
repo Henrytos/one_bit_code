@@ -1,9 +1,19 @@
+# Arquivos de compilação
+*.o
+*.out
 
+# Arquivos de backup
+*~
+*.swp
 
-Next/black-nextjs
-next13/
-NODE/todoList/
-Next/black-nextjs
-Next/black-nextjs
-Next/black-nextjs
-Next/black-nextjs
+# Diretório de dependências
+node_modules/
+vendor/
+
+# Arquivos de configuração sensíveis
+.env
+
+# Logs e arquivos temporários
+log/
+tmp/
+Mongo DB/todo list
