@@ -1,11 +1,22 @@
-async function insertNewPlanet(name = "terra", position = 0) {
+(async () => {
   const Planet = require("./models/Planet");
-  const newPlanet = await Planet.create({
-    name,
-    position,
-  });
+  //CREATE
+  /*const newPlanet = await Planet.create({
+    name: "marte",
+    position: 1,
+  });*/
 
-  console.log(newPlanet);
-}
+  //READ
+  /*const filterPlanets = await Planet.findAll({where:{}});*/
 
-insertNewPlanet("terra", 2);
+  //UPDATE
+  /*const updatePlanet = await Planet.findByPk(2);
+  updatePlanet.name = "tierra";
+  await updatePlanet.save();
+*/
+
+  //DELETE
+  /*  const deletePlanet = await Planet.findByPk(1);
+  await deletePlanet.destroy();
+  await deletePlanet.save();*/
+})();
