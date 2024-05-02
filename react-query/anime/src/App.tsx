@@ -1,80 +1,87 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { api } from "./utils/api";
 import { useState } from "react";
+import { useTodo } from "./hooks/useTodo";
 
-interface Todo {
+// Create a client
+
+export interface Todo {
   id: number;
   title: string;
   completed: boolean;
 }
 
-export default function App() {
-  const queryClient = useQueryClient();
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["todos"],
-    queryFn: async (): Promise<Todo[]> => {
-      return await api.get("/todo").then((res) => res.data);
-    },
-  });
-  const [newTodo, setNewTodo] = useState<string>("");
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error</div>;
+const getTodos = async () => {
+  const todos = await api.get<Todo[]>("/todo").then((res) => res.data);
+  return todos;
+};
 
-  const handleSubmit = (ev: any) => {
-    ev.preventDefault();
-    console.log(newTodo);
+export default function App() {
+  const [todo, setTodo] = useState<string>("");
+
+  const { data, isError, isLoading } = useQuery({
+    queryKey: ["todos"],
+    queryFn: getTodos,
+    retry: 1,
+  });
+
+  const { mutationCreate, mutationDelete, mutationUpdate } = useTodo();
+  if (isError) return <h1>is error aplication</h1>;
+  if (isLoading) return <h1>is Loading</h1>;
+
+  const handleAddTodoClick = () => {
+    mutationCreate.mutate({
+      id: Math.random(),
+      title: todo,
+      completed: false,
+    });
+    setTodo("");
   };
 
-  const addTodo = useMutation({
-    mutationFn: async (data: Todo) => {
-      return api.post("/todo", data).then((response) => response.data);
-    },
+  const handleCompleteTodoClick = (id: number) => {
+    mutationUpdate.mutate(id);
+  };
 
-    onSuccess: async (data: Todo) => {
-      console.log(data);
-      queryClient.setQueryData(["todos"], (currentData: Todo[]) => {
-        return [...currentData, data];
-      });
-    },
-  });
+  const handleDeleteTodoClick = (id: number) => {
+    mutationDelete.mutate(id);
+  };
 
   return (
-    <main className="bg-zinc-900 text-white min-h-screen w-full p-10 ">
-      <h1 className="text-2xl font-semibold text-center pb-4">Todo List</h1>
-      <hr />
-      <div className="flex justify-center mt-4">
-        <form className="flex flex-col  gap-2" onSubmit={handleSubmit}>
+    <>
+      <main>
+        <h1>todo list</h1>
+        <div>
+          <ul>
+            {data?.map((todo, i) => (
+              <li
+                key={todo.id}
+                className={`
+              ${todo.completed ? "line-through" : ""}
+              `}
+                onClick={() => handleCompleteTodoClick(todo.id)}
+              >
+                {i + 1}- {todo.title}
+                <button onClick={() => handleDeleteTodoClick(todo.id)}>
+                  x
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-4">
           <input
             type="text"
-            value={newTodo}
+            value={todo}
             onChange={(ev) => {
-              setNewTodo(ev.target.value);
+              setTodo(ev.target.value);
             }}
-            className="px-2 py-1 bg-zinc-900 border  "
+            className="border text-black"
           />
-          <button onClick={() => {}}>Enviar</button>
-        </form>
-      </div>
-      <div className="w-full max-w-sm flex flex-col gap-4 pt-8 m-auto">
-        {data?.map((todo) => (
-          <div key={todo.id} className="flex gap-5">
-            <span className="text-lg font-normal">
-              {todo.id} - {todo.title}
-            </span>
-            <button
-              onClick={() => {
-                addTodo.mutate({
-                  id: 1,
-                  completed: true,
-                  title: "henry",
-                });
-              }}
-            >
-              x
-            </button>
-          </div>
-        ))}
-      </div>
-    </main>
+
+          <button onClick={handleAddTodoClick}>add todo</button>
+        </div>
+      </main>
+    </>
   );
 }
