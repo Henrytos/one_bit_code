@@ -1,20 +1,17 @@
-import { useQuery } from "@tanstack/react-query";
-import { api } from "./utils/api";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
-import { useTodo } from "./hooks/useTodo";
+import { createTodo } from "./api/create-todo";
+import { updateTodo } from "./api/update-todo";
+import { getTodos } from "./api/get-todos";
+import { deleteTodo } from "./api/delete-todo";
 
 // Create a client
 
 export interface Todo {
-  id: number;
+  id?: string;
   title: string;
   completed: boolean;
 }
-
-const getTodos = async () => {
-  const todos = await api.get<Todo[]>("/todo").then((res) => res.data);
-  return todos;
-};
 
 export default function App() {
   const [todo, setTodo] = useState<string>("");
@@ -25,25 +22,73 @@ export default function App() {
     retry: 1,
   });
 
-  const { mutationCreate, mutationDelete, mutationUpdate } = useTodo();
+  const queryClient = useQueryClient();
+
+  const { mutateAsync: createTodofn } = useMutation({
+    mutationFn: createTodo,
+    onSuccess: (_, variables) => {
+      const cached = queryClient.getQueryData<Todo[]>(["todos"]);
+      if (cached) {
+        queryClient.setQueryData(["todos"], () => {
+          return [...cached, variables];
+        });
+      }
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+  });
+
+  const { mutateAsync: deleteTodofn } = useMutation({
+    mutationFn: deleteTodo,
+    onSuccess: (_, variables) => {
+      const cached = queryClient.getQueryData<Todo[]>(["todos"]);
+      if (cached) {
+        queryClient.setQueryData(["todos"], () => {
+          return cached.filter((todo) => Number(todo.id) !== Number(variables));
+        });
+      }
+    },
+  });
+
+  const { mutateAsync: updateTodofn } = useMutation({
+    mutationFn: updateTodo,
+    onSuccess: (_, variables) => {
+      const todoId = variables.id;
+      const cached = queryClient.getQueryData<Todo[]>(["todos"]);
+      if (cached) {
+        queryClient.setQueryData(["todos"], () => {
+          return cached.map((todo) => {
+            if (todo.id === todoId) {
+              return {
+                ...todo,
+                completed: !todo.completed,
+              };
+            }
+            return todo;
+          });
+        });
+      }
+    },
+  });
+
   if (isError) return <h1>is error aplication</h1>;
   if (isLoading) return <h1>is Loading</h1>;
 
   const handleAddTodoClick = () => {
-    mutationCreate.mutate({
-      id: Math.random(),
+    createTodofn({
+      id: Math.ceil(Math.random() * 1000).toString(),
       title: todo,
       completed: false,
     });
-    setTodo("");
   };
 
-  const handleCompleteTodoClick = (id: number) => {
-    mutationUpdate.mutate(id);
+  const handleTogleTodoClick = (todo: Todo) => {
+    updateTodofn(todo);
   };
 
-  const handleDeleteTodoClick = (id: number) => {
-    mutationDelete.mutate(id);
+  const handleDeleteTodoClick = (id: string) => {
+    deleteTodofn(id);
   };
 
   return (
@@ -58,10 +103,10 @@ export default function App() {
                 className={`
               ${todo.completed ? "line-through" : ""}
               `}
-                onClick={() => handleCompleteTodoClick(todo.id)}
+                onClick={() => handleTogleTodoClick(todo)}
               >
-                {i + 1}- {todo.title}
-                <button onClick={() => handleDeleteTodoClick(todo.id)}>
+                {i + 1}- {todo.title} --------{todo.id}
+                <button onClick={() => handleDeleteTodoClick(todo.id ?? "1")}>
                   x
                 </button>
               </li>
