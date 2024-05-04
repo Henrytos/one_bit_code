@@ -4,14 +4,9 @@ import { createTodo } from "./api/create-todo";
 import { updateTodo } from "./api/update-todo";
 import { getTodos } from "./api/get-todos";
 import { deleteTodo } from "./api/delete-todo";
+import { Todo } from "./types/todo";
 
 // Create a client
-
-export interface Todo {
-  id?: string;
-  title: string;
-  completed: boolean;
-}
 
 export default function App() {
   const [todo, setTodo] = useState<string>("");
@@ -105,7 +100,7 @@ export default function App() {
               `}
                 onClick={() => handleTogleTodoClick(todo)}
               >
-                {i + 1}- {todo.title} --------{todo.id}
+                {i + 1}- {todo.title}
                 <button onClick={() => handleDeleteTodoClick(todo.id ?? "1")}>
                   x
                 </button>
